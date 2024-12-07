@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87ceeb, #ffffff);
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  header button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #weather-data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  #chart-container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
