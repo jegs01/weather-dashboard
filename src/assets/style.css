@@ -1,122 +1,276 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #87ceeb, #ffffff);
-    color: #333;
-  }
-  
-  header input {
-    padding: 10px;
-    font-size: 1rem;
-    margin-right: 10px;
-  }
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+  color: #333;
+}
 
-  header {
+.header input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.footer {
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.header h1 {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header .search-bar input {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.header .search-bar button,
+.header #unit-toggle {
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header .search-bar button:hover,
+.header #unit-toggle:hover {
+  background-color: #005fa3;
+}
+
+#favorites {
+  text-align: right;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+#favorites ul {
+  display: inline-block;
+  list-style-type: none;
+  padding-right: 20px;
+  margin: 0;
+}
+
+#weather-data {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+#chart-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  margin-top: 15px;
+  display: inline;
+  margin-left: 8px;
+  margin-bottom: 0;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.success {
+  text-align: center;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  margin-right: 30px;
+  justify-content: flex-end;
+}
+
+.page-indicator {
+  font-weight: bold;
+  color: #ffffff;
+} 
+
+ul li a:hover {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.about {
+  width: 60%; 
+  margin: 0 auto; 
+  text-align: center; 
+  padding: 20px; 
+}
+
+.request {
+text-align: center;
+}
+
+.about h2, .request h2, .request h2 {
+  margin-bottom: 20px; 
+  color: #124a5e;
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.about p {
+  line-height: 1.6; 
+}
+
+form label {
+  display: block;
+  margin: 30px 0;
+  text-align: center;
+}
+
+input[type="text"], input[type="email"] {
+  width: auto;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+textarea {
+  width: 40%;
+  height: 100px;
+  resize: vertical;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #124a5e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .header {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
-    padding-right: 20px;
-  }
-  
-  header h1 {
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  header .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  header .search-bar input {
-    padding: 5px;
-    font-size: 1rem;
-  }
-  
-  header .search-bar button,
-  header #unit-toggle {
-    padding: 5px 10px;
-    font-size: 1rem;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  header .search-bar button:hover,
-  header #unit-toggle:hover {
-    background-color: #005fa3;
-  }
-  
-  #favorites {
-    text-align: right;
-    margin-top: 20px;
-    padding-right: 20px;
-  }
-  
-  #favorites ul {
-    display: inline-block;
-    list-style-type: none;
-    padding-right: 20px;
-    margin: 0;
-  }
-  
-  #weather-data {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  #chart-container {
-    width: 80%;
-    margin: 20px auto;
-  }
-  
-  h2 {
-    text-align: center;
   }
 
-  @media (max-width: 768px) {
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
-    }
-  
-    header .search-bar {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      align-items: flex-end;
-    }
-  
-    header .search-bar input,
-    header .search-bar button
-     {
-      font-size: 1rem;
-    }
-  
-    header h1 {
-      text-align: center;
-      width: 100%;
-    }
+  .header .search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-end;
   }
-  
+
+  .header .search-bar input,
+  .header .search-bar button {
+    font-size: 1rem;
+  }
+
+  .header h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 0;
+  }
+
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

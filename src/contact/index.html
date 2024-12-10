@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link href="../assets/img/favicon.ico" rel="icon" />
+  </head>
+  <body>
+    <header id="main-header"></header>
+    <hr />
+    <main class="request">
+      <h2>Contact Us</h2>
+      <form method="get" action="success.html">
+        <label for="first-name"
+          >First Name:
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            title="First Name"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+        <label for="last-name"
+          >Last Name:
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            title="Last Name"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+        <label for="email"
+          >Email:
+          <input
+            type="email"
+            id="email"
+            name="email"
+            title="Email"
+            autocomplete="email"
+            placeholder="example@domain.com"
+            required
+          />
+        </label>
+        <label for="description"
+          >Message:
+          <textarea id="description" name="description" title="Bird Species Description"></textarea>
+        </label>
+        <input type="hidden" id="timestamp" name="timestamp" />
+        <input type="submit" value="Send Message" />
+      </form>
+    </main>
+    <hr />
+    <footer id="main-footer"></footer>
+    <script type="module" src="../js/about.js"></script>
+  </body>
+</html>

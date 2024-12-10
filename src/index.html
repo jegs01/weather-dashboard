@@ -1,40 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather Dashboard</title>
-  <link rel="stylesheet" href="assets/style.css" />
-  <link href="assets/img/favicon.ico" rel="icon">
-</head>
-<body>
-  <div id="app">
-    <header>
-      <h1>Weather Dashboard</h1>
-      <div class="search-bar">
-        <input type="text" id="city-input" placeholder="Enter city name" />
-        <button id="search-btn">Search</button>
-        <button id="refresh-btn">Refresh</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link href="assets/img/favicon.ico" rel="icon" />
+  </head>
+  <body>
+    <header id="main-header"></header>
+    <hr />
+    <main>
+      <div id="app">
+        <div class="header">
+          <h1>Weather Dashboard</h1>
+          <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Enter city name" />
+            <button id="search-btn">Search</button>
+            <button id="refresh-btn">Refresh</button>
+          </div>
+          <button id="unit-toggle">Switch to °F</button>
+        </div>
+
+        <section id="favorites">
+          <ul id="favorites-list"></ul>
+        </section>
+
+        <div>
+          <h2>Weather Forecast Report</h2>
+          <section id="weather-data"></section>
+        </div>
+        <hr />
+        <div>
+          <h2>Weather Forecast Chart</h2>
+          <section id="chart-container"></section>
+        </div>
       </div>
-      <button id="unit-toggle">Switch to °F</button>
-    </header>
-
-    <section id="favorites">
-      <ul id="favorites-list"></ul>
-    </section>
-
-    <div>
-      <h2>Weather Report</h2>
-      <section id="weather-data"></section>
-    </div>
-    <hr>
-    <div>
-      <h2>Weather Chart</h2>
-      <section id="chart-container"></section>
-    </div>
-    
-  </div>
-
-  <script type="module" src="main.js"></script>
-</body>
+    </main>
+    <hr />
+    <footer id="main-footer"></footer>
+    <script type="module" src="/js/main.js"></script>
+  </body>
 </html>

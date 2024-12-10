@@ -1,36 +1,36 @@
-import Chart from "chart.js/auto";
+import Chart from 'chart.js/auto';
 
 export default function renderChart(containerId, forecast) {
   const container = document.getElementById(containerId);
   container.innerHTML = `<canvas id="forecast-chart"></canvas>`;
 
-  const canvas = document.getElementById("forecast-chart");
-  const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById('forecast-chart');
+  const ctx = canvas.getContext('2d');
 
   function setCanvasHeight() {
     if (window.innerWidth >= 1024) {
-      canvas.style.height = "600px";
+      canvas.style.height = '600px';
     } else {
-      canvas.style.height = "300px";
+      canvas.style.height = '300px';
     }
   }
 
   setCanvasHeight();
-  window.addEventListener("resize", setCanvasHeight);
+  window.addEventListener('resize', setCanvasHeight);
 
   new Chart(ctx, {
-    type: "line",
+    type: 'line',
     data: {
       labels: forecast.map((item) => new Date(item.date).toDateString()),
       datasets: [
         {
-          label: "Temperature",
+          label: 'Temperature',
           data: forecast.map((item) => item.main.temp),
-          borderColor: "#007acc",
+          borderColor: '#007acc',
           borderWidth: 2,
-          fill: false,
-        },
-      ],
+          fill: false
+        }
+      ]
     },
     options: {
       responsive: true,
@@ -39,19 +39,19 @@ export default function renderChart(containerId, forecast) {
         legend: {
           display: true,
           labels: {
-            color: "#333",
-          },
-        },
+            color: '#333'
+          }
+        }
       },
       scales: {
         x: {
           ticks: {
             autoSkip: true,
             maxRotation: 0,
-            minRotation: 0,
-          },
-        },
-      },
-    },
+            minRotation: 0
+          }
+        }
+      }
+    }
   });
 }
